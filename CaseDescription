@@ -1,0 +1,86 @@
+The Data Engineering Test Case that I have solved in October 2025.
+
+
+The case Description:
+Overview
+The goal of this exercise is not to produce a final, production-ready solution but to
+understand your approach to a real-world data project. We are looking for insights into
+how you think about:
+● Project Planning & Requirements: How do you translate a product brief into actionable
+data engineering requirements? What questions would you ask to ensure alignment
+with business needs?
+● Data Engineering Principles: How would you design a scalable and efficient data
+ingestion strategy for multiple marketing platforms?
+● Analytics Engineering: How would you structure the data to make it reliable, usable,
+and easily accessible for a business intelligence analyst using a tool like DBT?
+The Scenario
+You have been provided with an initial product brief from our Demand Generation team. They
+need marketing insights to optimize their marketing spend.
+They do have data on which campaigns are responsible for their leads, MQL opportunities,
+etc. However, those insights are limited to a first or last-touch attribution model. To truly
+understand which campaigns are contributing to new business sales bookings, they would
+like to move to a Multi-touch-attribution model.
+Paid platforms:
+- Google Ads
+- LinkedIn Ads
+CRM/MAP/Analytics
+- HubSpot
+- Google Analytics
+Data stack:
+- DBT
+- BigQuery (Google Cloud)
+Your task is to review the provided brief and propose a high-level technical solution. Assume
+we have DBT set up, but haven’t loaded any of the data sources yet.
+
+
+Product Brief
+Project Goal: Build a marketing model including Google Analytics data, Google Ads data and
+LinkedIn data joined with a pipeline model from HubSpot.
+Key Requirements (MoSCoW):
+● Must: Track marketing-influenced revenue and AOV using a multi-touch attribution
+model.
+● Must: Integrate Google Ads, LinkedIn Ads, Google Analytics, and HubSpot data for a
+holistic view.
+● Should: Enable segmenting data by various dimensions
+● Key Use Case:
+○ Analyze marketing campaign performance and ROI.
+Your Assignment
+Please provide a detailed response addressing the following three sections.
+Part 1: Project Planning & Requirements Analysis
+Critique the provided product brief. From a data engineering perspective, what are the key
+ambiguities or missing pieces of information?
+What are the top 3-5 questions you would ask the Demand Generation team to clarify the
+requirements before beginning any technical work? Explain why each question is critical for
+the success of this project.
+How would you approach defining the success criteria for this project beyond the initial use
+cases?
+Part 2: Data Ingestion Strategy
+Propose a high-level data ingestion strategy to get the data from the source systems (GAds,
+Google Analytics 4, LinkedIn Ads, HubSpot) into a central data warehouse (e.g., BigQuery).
+Outline your recommended approach and justify your choice. Include details on the type of
+data loading (e.g., full vs. incremental loads, batch vs. streaming) and how you would handle
+data from each of the three sources.
+Briefly describe a high-level architecture diagram (you can use text to represent this, e.g.,
+Source -> Ingestion method -> Data Warehouse)
+
+Part 3: Data Transformation & Analytics Layer
+Describe your approach to modeling this data for the final dashboard using a tool like DBT.
+The goal is to create a reliable and well-organized data model that an analyst can easily query
+without needing to understand the underlying raw data.
+Describe and explain the DBT models you would build to support the use cases in the brief.
+For each model, specify its purpose, the tables it would join, and the key logic it would contain
+(e.g., calculating ROAS).
+Finally, convert your approach to a proof-of-concept DBT repository.
+Deliverables
+We expect the following deliverables as part of your assessment:
+● Project Planning & Requirements Analysis (Part 1):
+A written response detailing your critique, clarifying questions, and success criteria.
+● Data Ingestion Strategy (Part 2):
+A written response outlining your proposed strategy, justification, loading approach,
+and a high-level architecture diagram (text-based).
+● Data Transformation & Analytics Layer (Part 3):
+○ A written response describing your DBT modeling approach, including purpose,
+joins, and key logic for each model.
+○ A proof-of-concept DBT repository (e.g., a GitHub link or a zip file) containing your
+DBT models. You do not need to populate it with actual data, but the structure and
+logic should be clear.
